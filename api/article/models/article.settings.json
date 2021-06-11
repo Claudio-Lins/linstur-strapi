@@ -8,9 +8,8 @@
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
-  "pluginOptions": {},
   "attributes": {
     "title": {
       "type": "string",
@@ -23,6 +22,19 @@
     "content": {
       "type": "richtext",
       "required": true
+    },
+    "publishedAt": {
+      "type": "date",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "published"
+      ],
+      "required": true,
+      "default": "draft"
     },
     "slug": {
       "type": "uid",
@@ -42,24 +54,11 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": true,
-      "pluginOptions": {}
+      "required": true
     },
     "author": {
-      "via": "articles",
-      "model": "writer"
-    },
-    "galery": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
+      "model": "writer",
+      "via": "articles"
     }
   }
 }
