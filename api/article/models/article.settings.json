@@ -54,11 +54,24 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": true
+      "required": true,
+      "pluginOptions": {}
     },
     "author": {
       "model": "writer",
       "via": "articles"
+    },
+    "galery": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }
