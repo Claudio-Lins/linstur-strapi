@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_tests",
+  "info": {
+    "name": "Home Test"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
